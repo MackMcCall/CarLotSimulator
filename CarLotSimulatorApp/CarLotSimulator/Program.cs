@@ -19,7 +19,11 @@ namespace CarLotSimulator
             myCar.MakeEngineNoise(myCar.EngineNoise);
             myCar.MakeHonkNoise(myCar.HonkNoise);
 
-            parkingLot.AllCars.Add(myCar);
+            parkingLot.CarsInLot.Add(myCar);
+            //parkingLot.UpdateCarAmount();
+            Console.WriteLine($"Number of cars in the lot: {CarLot.numberOfCars}");
+
+
 
 
             Car wifesCar = new Car() 
@@ -33,13 +37,20 @@ namespace CarLotSimulator
             };
             wifesCar.MakeEngineNoise(wifesCar.EngineNoise);
             wifesCar.MakeHonkNoise(wifesCar.HonkNoise);
-            parkingLot.AllCars.Add(wifesCar);
+            parkingLot.CarsInLot.Add(wifesCar);
+           // parkingLot.UpdateCarAmount();
+            Console.WriteLine($"Number of cars in the lot: {CarLot.numberOfCars}");
+
+
 
 
             Car neighborCar = new Car(2012, "Ford", "Explorer", "ggrrr", "ernk-ernk", true);
             neighborCar.MakeEngineNoise(neighborCar.EngineNoise);
             neighborCar.MakeHonkNoise(neighborCar.HonkNoise);
-            parkingLot.AllCars.Add(neighborCar);
+            parkingLot.CarsInLot.Add(neighborCar);
+            //parkingLot.UpdateCarAmount();
+            Console.WriteLine($"Number of cars in the lot: {CarLot.numberOfCars}");
+
 
             Console.WriteLine("");
             Console.WriteLine($"These are all the cars in the lot:");

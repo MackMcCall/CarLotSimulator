@@ -31,9 +31,11 @@ namespace CarLotSimulator
         public Car()
         {
             //default constructor
+            //added incrementer to constructor
+            CarLot.numberOfCars++;
         }
-
-        public Car(int year, string make, string model, string engineNoise, string honkNoise, bool isDriveable)
+        
+        public Car(int year, string make, string model, string engineNoise, string honkNoise, bool isDriveable) : this()
         {
             Year = year;
             Make = make;
